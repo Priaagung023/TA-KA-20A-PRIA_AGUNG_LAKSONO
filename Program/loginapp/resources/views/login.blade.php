@@ -17,9 +17,9 @@
 
 <body>
     <!-- tampilan login -->
-    <main id="main_login" class="flex items-center justify-center h-screen bg-rose-300">
+    <main id="main_login" class="flex items-center justify-center h-screen bg-rose-600">
         <!-- frame login -->
-        <section id="section_frame" class="w-1/3 border-2 border-rose-500 rounded-xl p-5 bg-indigo-100">
+        <section id="section_frame" class="w-1/3 border-2 border-rose-500 rounded-xl p-5 bg-indigo-600">
             <!-- area judul -->
             <section id="section_judul" class="mb-5 text-center">
                 Login Aplikasi
@@ -37,7 +37,7 @@
             <!-- area checkbox -->
             <section id="section_checkbox" class="mt -2">
                 <input type="checkbox" name="chk_ingat" id="chk_ingat">
-                
+                <label for="chk_ingat">Ingat Saya</label>
             </section>
 
             <!-- area tombol-->
@@ -83,8 +83,7 @@
         });
 
         // buat fungsi untuk proses login
-        function setLogin() 
-        {
+        function setLogin() {
             // ambil nilai dari txt_username dan txt_password
             // jika txt_username atau txt_password tidak diisi
             if (txt_username.value == "" || txt_password.value == "") {
@@ -99,9 +98,53 @@
                 let form = new FormData();
                 form.append("username", txt_username.value);
                 form.append("password", txt_password.value);
+                form.append("ingat", ingat);
+
+                // proses cek data (dengan konsep asyncronous/async JS)
+                // 1. promise (fetch)
+                // 2. async
+                // fetch = untuk mengirim data ke url yang akan memproses data input (form)
+                fetch("{{ url('/login/get') }}", {
+                        method: "POST",
+                        headers: {
+                            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf_token"]').content
+                        },
+                        body: form
+                    })
+                    // berfungsi untuk merespon data hasil dari proses fetch
+                    .then((response) => response.json())
+                    // berfungsi untuk membaca hasil dari response (then yang pertama)
+                    .then((result) => {
+                        // jika hasil "result" = 1
+                        if (result.output == 1) {
+                            // alihkan ke halaman dashboard
+                            location.href = "{{ url('/') }}";
+                        }
+                        // jika hasil "result" != 1
+                        else {
+                            alert("Username / Password Tidak Ditemukan !");
+                        }
+                    })
+                    // jika proses "fetch" gagal
+                    .catch((error) => {
+                        alert("Data Gagal Dikirim !")
+                    });
+
             }
+
+
         }
-        
+
+        // event untuk btn_batal
+        // btn_batal.addEventListener('click',
+        // function(){
+        //     alert("Klik Tombol Batal");
+        // })
+        btn_batal.addEventListener('click', setRefresh);
+
+        function setRefresh() {
+            location.href = "{{ url('/login') }}";
+        }
     </script>
 </body>
 

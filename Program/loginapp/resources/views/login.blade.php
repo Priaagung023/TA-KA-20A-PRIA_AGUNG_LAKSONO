@@ -37,7 +37,7 @@
             <!-- area checkbox -->
             <section id="section_checkbox" class="mt -2">
                 <input type="checkbox" name="chk_ingat" id="chk_ingat">
-                <label for="chk_ingat">Ingat Saya</label>
+                
             </section>
 
             <!-- area tombol-->
@@ -83,7 +83,8 @@
         });
 
         // buat fungsi untuk proses login
-        function setLogin() {
+        function setLogin() 
+        {
             // ambil nilai dari txt_username dan txt_password
             // jika txt_username atau txt_password tidak diisi
             if (txt_username.value == "" || txt_password.value == "") {
@@ -98,53 +99,9 @@
                 let form = new FormData();
                 form.append("username", txt_username.value);
                 form.append("password", txt_password.value);
-                form.append("ingat", ingat);
-
-                // proses cek data (dengan konsep asyncronous/async JS)
-                // 1. promise (fetch)
-                // 2. async
-                // fetch = untuk mengirim data ke url yang akan memproses data input (form)
-                fetch("{{ url('/login/get') }}", {
-                        method: "POST",
-                        headers: {
-                            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf_token"]').content
-                        },
-                        body: form
-                    })
-                    // berfungsi untuk merespon data hasil dari proses fetch
-                    .then((response) => response.json())
-                    // berfungsi untuk membaca hasil dari response (then yang pertama)
-                    .then((result) => {
-                        // jika hasil "result" = 1
-                        if (result.output == 1) {
-                            // alihkan ke halaman dashboard
-                            location.href = "{{ url('/') }}";
-                        }
-                        // jika hasil "result" != 1
-                        else {
-                            alert("Username / Password Tidak Ditemukan !");
-                        }
-                    })
-                    // jika proses "fetch" gagal
-                    .catch((error) => {
-                        alert("Data Gagal Dikirim !")
-                    });
-
             }
-
-
         }
-
-        // event untuk btn_batal
-        // btn_batal.addEventListener('click',
-        // function(){
-        //     alert("Klik Tombol Batal");
-        // })
-        btn_batal.addEventListener('click', setRefresh);
-
-        function setRefresh() {
-            location.href = "{{ url('/login') }}";
-        }
+        
     </script>
 </body>
 

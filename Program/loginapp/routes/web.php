@@ -22,6 +22,9 @@ use App\Http\Controllers\Dashboard;
     // buat rout halaman login
     Route::get('/login',[Login::class,'index']);
 
+    // buat route halaman dashboard
+    Route::get('/',[Dashboard::class,'index']);
+
     // buat route halaman dashboard (view)
     Route::get('/view',[Dashboard::class,'getView']);
 

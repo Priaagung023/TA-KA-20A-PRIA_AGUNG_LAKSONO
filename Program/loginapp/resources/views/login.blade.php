@@ -19,16 +19,18 @@ header("Content-Security-Policy 'self' cdn.tailwindcss.com");
 
 <body>
     <!-- tampilan login -->
-    <main id="main_login" class="flex items-center justify-center h-screen bg-teal-400">
+    <main id="main_login" class="flex items-center justify-center h-screen bg-sky-700">
+        <!--tambah gambar-->
+        <img src="logo.png" alt="logo.png">
         <!-- frame login -->
-        <section id="section_frame" class="w-1/3 border-2 border-rose-500 rounded-xl p-5 bg-indigo-600">
+        <section id="section_frame" class="w-1/3 border-2 border-rose-500 rounded-xl p-5 bg-sky-700">
             <!-- area judul -->
             <section id="section_judul" class="mb-5 text-center">
                 Siakad SMAN 07 Sumber Jaya
             </section>
 
             <!-- area input -->
-            <section id="section_input" class="flex flex-col">
+            <section id="section_input" class="flex flex-col ">
                 <!-- buat komponen textfield username dan password -->
                 <input type="text" name="txt_username" id="txt_username"
                     class="h-10 border-solid border-2 border-cyan-700 rounded-xl focus:outline-none focus:ring focus:border-blue-500 mb-2.5 p-2.5" placeholder="Isi Username" onkeypress="return setFilterInput(event)" onpaste="return false" oncut="return false" oncopy="return false">

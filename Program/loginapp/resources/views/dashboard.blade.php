@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,17 +10,9 @@
     {{-- <p>Selamat Datang, {{$isi_session}}</p> --}}
     {{-- <button id="btn_logout">Logout</button> --}}
     <!-- kode js -->
-    <script>
-        // deklarasi variabel komponen
-        let btn_logout = document.querySelector("#btn_logout");
-        // event untuk "btn_logout"
-        btn_logout.addEventListener("click", function(){
-            // alihkan ke halaman logout
-            location.href = "{{url('logout')}}";
-        });
-    </script>
-</body>
-</html>
+    
+{{-- </body>
+</html> --}}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -119,6 +111,15 @@
         <button id="btn_logout">Logout</button>
         </div>
     </main>
+    <script>
+        // deklarasi variabel komponen
+        let btn_logout = document.querySelector("#btn_logout");
+        // event untuk "btn_logout"
+        btn_logout.addEventListener("click", function(){
+            // alihkan ke halaman logout
+            location.href = "{{url('logout')}}";
+        });
+    </script>
 
     <footer>
         <p>&copy; 2024 Dashboard Siakad</p>

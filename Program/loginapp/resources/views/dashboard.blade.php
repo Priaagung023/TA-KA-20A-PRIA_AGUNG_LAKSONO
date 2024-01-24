@@ -78,7 +78,7 @@
 
     <header>
         <img src="logo2.png" alt="logo2.png">
-        <h1>Dashboard Siakad</h1>
+        <h1>Dashboard Siakad universitas Global</h1>
     </header>
 
     <nav>

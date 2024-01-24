@@ -26,7 +26,7 @@ header("Content-Security-Policy 'self' cdn.tailwindcss.com");
         <section id="section_frame" class="w-1/3 border-2 border-rose-500 rounded-xl p-5 bg-sky-700">
             <!-- area judul -->
             <section id="section_judul" class="mb-5 text-center">
-                Siakad SMAN 07 Sumber Jaya
+                Siakad universitas Global
             </section>
 
             <!-- area input -->

@@ -35,7 +35,7 @@
         }
 
         nav {
-            background-color: #4481dc;
+            background-color: #b3bac3;
             padding: 1em;
         }
 
@@ -59,7 +59,7 @@
         }
 
         .card {
-            background-color: #4481dc;
+            background-color: #f3f6fa;
             border: 1px solid #4481dc;
             border-radius: 5px;
             padding: 1em;
@@ -83,8 +83,8 @@
 
     <nav>
         <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Data Mahasiswa</a></li>
+            <li><a href="beranda">Beranda</a></li>
+            <li><a href="data">Data Mahasiswa</a></li>
             <li><a href="#">Jadwal Kuliah</a></li>
             <li><a href="#">Nilai Mahasiswa</a></li>
            

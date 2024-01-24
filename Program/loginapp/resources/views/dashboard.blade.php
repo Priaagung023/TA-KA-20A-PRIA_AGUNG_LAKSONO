@@ -35,7 +35,7 @@
         }
 
         nav {
-            background-color: #f4f4f4;
+            background-color: #4481dc;
             padding: 1em;
         }
 
@@ -55,12 +55,12 @@
         }
 
         h2 {
-            color: #333;
+            color: #4481dc;
         }
 
         .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: #4481dc;
+            border: 1px solid #4481dc;
             border-radius: 5px;
             padding: 1em;
             margin-bottom: 1em;
@@ -93,7 +93,7 @@
     </nav>
 
     <main>
-        <h2>Selamat datang di Dashboard Siakad</h2>
+        <h2>Selamat Datang, {{$isi_session}}</h2>
 
         <div class="card">
             <h3>Data Mahasiswa</h3>

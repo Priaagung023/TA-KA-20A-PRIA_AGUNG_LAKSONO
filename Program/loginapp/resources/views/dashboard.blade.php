@@ -85,8 +85,8 @@
         <ul>
             <li><a href="beranda">Beranda</a></li>
             <li><a href="data">Data Mahasiswa</a></li>
-            <li><a href="#">Jadwal Kuliah</a></li>
-            <li><a href="#">Nilai Mahasiswa</a></li>
+            <li><a href="jadwa">Jadwal Kuliah</a></li>
+            <li><a href="nilai">Nilai Mahasiswa</a></li>
            
             <!-- Tambahkan menu lain sesuai kebutuhan -->
         </ul>
@@ -97,6 +97,9 @@
 
         <div class="card">
             <h3>Data Mahasiswa</h3>
+            <h5>Data mahasiswa merujuk pada informasi atau rekam jejak yang terkait dengan individu yang 
+                terdaftar atau sedang belajar di suatu lembaga pendidikan tinggi seperti universitas, perguruan tinggi, atau institusi pendidikan lainnya.
+                 Informasi ini mencakup berbagai aspek yang relevan dengan status, kinerja, dan profil akademis mahasiswa. </h5>
             <!-- Tambahkan konten data mahasiswa di sini -->
         </div>
 

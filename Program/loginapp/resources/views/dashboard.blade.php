@@ -28,20 +28,20 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #15046c;
             color: #fff;
             padding: 1em;
             text-align: center;
         }
 
         nav {
-            background-color: #eee;
+            background-color: #f4f4f4;
             padding: 1em;
         }
 
         nav ul {
             list-style: none;
-            margin: 0;
+            margin: 1px;
             padding: 0;
             display: flex;
         }
@@ -67,7 +67,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #15046c;
             color: #fff;
             padding: 1em;
             text-align: center;
@@ -77,6 +77,7 @@
 <body>
 
     <header>
+        <img src="logo2.png" alt="logo2.png">
         <h1>Dashboard Siakad</h1>
     </header>
 
@@ -86,6 +87,7 @@
             <li><a href="#">Data Mahasiswa</a></li>
             <li><a href="#">Jadwal Kuliah</a></li>
             <li><a href="#">Nilai Mahasiswa</a></li>
+           
             <!-- Tambahkan menu lain sesuai kebutuhan -->
         </ul>
     </nav>
@@ -120,9 +122,10 @@
             location.href = "{{url('logout')}}";
         });
     </script>
+   
 
     <footer>
-        <p>&copy; 2024 Dashboard Siakad</p>
+        <p>&copy; 2024 Dashboard Siakad University Global</p>
     </footer>
 
 </body>
